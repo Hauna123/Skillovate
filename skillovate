@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Skillovate Buttons</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .custom-buttons-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            width: 100%;
+        }
+
+        button {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 1em;
+            cursor: pointer;
+            box-shadow: 4px 6px 0px black;
+            border: 4px solid;
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
+            z-index: 100;
+            transition: box-shadow 250ms, transform 250ms, filter 50ms;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #fff;
+            width: 100%;
+            max-width: 280px;
+        }
+
+        button:hover {
+            transform: translate(2px, 2px);
+            box-shadow: 2px 3px 0px black;
+        }
+
+        button:active {
+            filter: saturate(0.75);
+        }
+
+        button::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            transform: translateX(-100%);
+            transition: transform 250ms;
+        }
+
+        button:hover::after {
+            transform: translateX(0);
+        }
+
+        /* Button Colors */
+        .h2 {
+            background-color: #ff9999; /* Light Red */
+            border-color: #cc0000;
+        }
+
+        .h2::after {
+            background-color: #cc0000;
+        }
+
+        .h3 {
+            background-color: #99ccff; /* Light Blue */
+            border-color: #0066cc;
+        }
+
+        .h3::after {
+            background-color: #0066cc;
+        }
+
+        .grade1 {
+            background-color: #99ff99; /* Light Green */
+            border-color: #00cc00;
+        }
+
+        .grade1::after {
+            background-color: #00cc00;
+        }
+
+        .grade2 {
+            background-color: #ffff99; /* Light Yellow */
+            border-color: #cccc00;
+        }
+
+        .grade2::after {
+            background-color: #cccc00;
+        }
+
+        .grade3 {
+            background-color: #ffcc99; /* Light Orange */
+            border-color: #ff6600;
+        }
+
+        .grade3::after {
+            background-color: #ff6600;
+        }
+
+        .grade4 {
+            background-color: #ff99cc; /* Light Pink */
+            border-color: #cc0066;
+        }
+
+        .grade4::after {
+            background-color: #cc0066;
+        }
+
+        .grade5 {
+            background-color: #cc99ff; /* Light Purple */
+            border-color: #6600cc;
+        }
+
+        .grade5::after {
+            background-color: #6600cc;
+        }
+
+        .grade6 {
+            background-color: #99ffcc; /* Light Teal */
+            border-color: #00cc99;
+        }
+
+        .grade6::after {
+            background-color: #00cc99;
+        }
+
+        /* Mobile Responsive Design */
+        @media (max-width: 768px) {
+            button {
+                padding: 1em;
+                font-size: 1em;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="custom-buttons-container">
+    <div class="row">
+        <button class="h2" onclick="window.location.href='#'">
+            <span>H2</span> Skillovate
+        </button>
+        <button class="h3" onclick="window.location.href='#'">
+            <span>H3</span> Skillovate
+        </button>
+        <button class="grade1" onclick="window.location.href='https://hauna.co.in/grade-1-skillovate'">
+            <span>1</span> Skillovate
+        </button>
+        <button class="grade2" onclick="window.location.href='https://hauna.co.in/grade-2-skillovate/'">
+            <span>2</span> Skillovate
+        </button>
+        <button class="grade3" onclick="window.location.href='https://hauna.co.in/grade-3-skillovate/'">
+            <span>3</span> Skillovate
+        </button>
+        <button class="grade4" onclick="window.location.href='https://hauna.co.in/grade-4-skillovate/'">
+            <span>4</span> Skillovate
+        </button>
+        <button class="grade5" onclick="window.location.href='https://hauna.co.in/grade-5-skillovate/'">
+            <span>5</span> Skillovate
+        </button>
+        <button class="grade6" onclick="window.location.href='https://hauna.co.in/hauna-husna-reading-assessment'">
+            <span>6</span> Reading Fluency Test
+        </button>
+    </div>
+</div>
+
+</body>
+</html>
